@@ -10,18 +10,36 @@ int servoOnePosition = 0;
 int servoTwoPosition = 0;
 
 const int buttonPin = 34;
+const int piezoPin = 4;
+
+int buttonCount = 0;
 
 int gameStarted = 0;
 
 int highScore = 0;
-
 int scoreCount = 0;
 
 int buttonState = 0;
+int piezoState = 0;
+int newPos = 0;
+int playingGame = 1;
 
-//the initialHiddenPositions when the game is not active
+//the initial Hidden Positions when the game is not active
 int servoOneHidden = 0;
 int servoTwoHidden = 0;
+
+long previousMillis = 0;         // will store last time LED 1 was updated
+long previousMillis2 = 0;        // will store last time LED 2 was updated
+long previousMillis3 = 0;        // will store last time LED 3 was updated
+
+long timeHeartbeat = 500;        // time between flashes of LED 1, as a sign of life  (milliseconds)
+long timeWarning = 5000;         // time before warning light starts flashing (milliseconds)
+long timeExpired = 50000;        // time at which last LED turns on (milliseconds)
+
+boolean beating = true;          // status of each process for easy boolean checks
+boolean warning = false;         // status of each process for easy boolean checks
+boolean expired = false;         // status of each process for easy boolean checks
+
 
 void setup() {
   // put your setup code here, to run once:
@@ -31,7 +49,8 @@ void setup() {
   oneServo.write(servoOnePosition);
   twoServo.write(servoTwoPosition);
 
-  pinMode(buttonPin, INPUT_PULLUP);
+  pinMode(buttonPin, INPUT);
+  pinMode(piezoPin, INPUT);
 
   lcd.init();  //initialize the lcd
   lcd.backlight();  //open the backlight 
@@ -58,29 +77,23 @@ void setup() {
 void loop() {
 
 buttonState = digitalRead(buttonPin);
+piezoState = digitalRead(piezoPin);
+Serial.println(piezoState);
 
-if (buttonState == 1 && gameStarted == 0)
+if (piezoState == 1 && gameStarted == 0)
 {
   gameStarted = 1;
-}
-if (buttonState == 1 && gameStarted == 1)
-{
-  lcd.setCursor (0, 0);
-  lcd.print("");
-  lcd.setCursor (0, 1);
-  lcd.print("     GAME OVER      ");
-  lcd.setCursor (0, 2);
-  lcd.print("");
-  lcd.setCursor (0, 3);
-  lcd.print("");
 
-  delay(100);
-  returnHomeScreen();
+  //delay(5000);
+
 }
+
   
 if (gameStarted == 0) //offline  
 {
   //set LCD to write original screen
+  returnHomeScreen();
+
 }
 
 if (gameStarted == 1)
@@ -95,8 +108,71 @@ if (gameStarted == 1)
   lcd.print(scoreCount); // pad with spaces for centering
   lcd.setCursor ( 0, 3 );            // go to the fourth row
   lcd.print("                    ");
-  
+
+  if (piezoState == 1)
+  {
+    scoreCount++;
+  }
+  newPos = random(0, 180);
+  oneServo.write(newPos);
+  newPos = random(0, 180);
+  twoServo.write(newPos);
+
 }
+
+if (gameStarted == 2)
+{
+  lcd.setCursor ( 0, 0 );            // go to the top left corner
+  lcd.print("  GAME OVER         "); // write this string on the top row
+  lcd.setCursor ( 0, 1 );            // go to the 2nd row
+  lcd.print("                    "); // pad string with spaces for centering
+  lcd.setCursor ( 0, 2 );            // go to the third row
+  lcd.print("Score: ");
+  lcd.print(scoreCount); // pad with spaces for centering
+  lcd.setCursor ( 0, 3 );            // go to the fourth row
+  lcd.print("                    ");
+
+  delay(10000);
+
+  gameStarted == 0;
+}
+
+ // check to see if it's time to blink the LED; that is, is the difference
+ // between the current time and last time we blinked the LED bigger than
+ // the interval at which we want to blink the LED.
+ 
+ // Check to see if it is time to flash the HEARTBEAT
+ if (millis() - previousMillis > timeHeartbeat){
+     // if the LED is off turn it on and vice-versa,
+     // making it flash at the interval set in timeHeartbeat
+    
+     if (beating == true){
+    // digitalWrite(ledPin, value);
+     }
+    if ((warning == true) and (expired == false)) {
+      // digitalWrite(ledPin2, value);
+    }
+   
+     // Check to see if it is time to turn on the WARNING LED
+     if (millis() - previousMillis2 > timeWarning) {
+       warning = true;     // set flag so warning LED will start flashing with heartbeat
+      // digitalWrite(ledPin2, HIGH);
+       
+       // Check to see if it is time to turn on the EXPIRED LED
+       // Once this LED is turned on, it stays on until reset
+       if(millis() - previousMillis3 > timeExpired){
+         expired = true;   // set flag so warning LED won't flash anymore
+         beating = false;  // set flag so heartbeat LED won't flash anymore
+       //  digitalWrite(ledPin3, HIGH);  // set final state of LED        
+        // digitalWrite(ledPin2, HIGH);  // set final state of LED
+       //  digitalWrite(ledPin, HIGH);   // set final state of LED 
+       gameStarted = 2;                   
+         previousMillis3 = millis();   // remember the last time we blinked the LED
+       }
+     previousMillis2 = millis();       // remember the last time we blinked the LED
+     }
+     previousMillis = millis();        // remember the last time we blinked the LED
+ }
 
 }
 
