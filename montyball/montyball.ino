@@ -36,7 +36,7 @@ long previousMillis3 = 0;        // will store last time LED 3 was updated
 
 long timeHeartbeat = 500;        // time between flashes of LED 1, as a sign of life  (milliseconds)
 long timeWarning = 5000;         // time before warning light starts flashing (milliseconds)
-long timeExpired = 60000;        // time at which last LED turns on (milliseconds)
+long timeExpired = 30000;        // time at which last LED turns on (milliseconds)
 
 boolean beating = true;          // status of each process for easy boolean checks
 boolean warning = false;         // status of each process for easy boolean checks
