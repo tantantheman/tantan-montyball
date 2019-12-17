@@ -7,7 +7,7 @@
 A tabletop game machine for class. Final project for CPSC 334.  
 Programming in Arduino IDE.  
 
-**Artist's Statement:**  
+**_Artist's Statement:_**  
 The Monty Ball Machine seeks to serve as an entertaining game that sheds light on the frustrations of everyday life. Under the guise of a typical arcade-style ball game, it quickly reveals itself as frantic and chaotic, representing the obstacles in life that are being thrown at oneself at an intense speed. Modeled and built as a tabletop version of skee-ball type games found at arcades, the Monty Ball Machine utilizes servo motors as the obstacles in the game, while a vibration sensor attached to a catching board detects successful rolls and updates the score on the LCD display accordingly. The machine was built as a modular setup, with ease of transport and repair in mind during the design process.
 
 **Concept:**  
