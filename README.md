@@ -51,13 +51,25 @@ The ball return system was relatively straightforward. A sheet of plywood was el
 
 For the second module, containing the electronics, sensor, and obstacles, another rectangular prism was built, with a face opening towards the player and space in the back to access electronics and to power the system. To create the target area, two small rectangles of balsa wood acted as border pillars, shrinking the target area towards the center. The back of the target area is a rectangle of wood tiled approximately 60 degrees north, essentially catching the balls as they fly off the ramp and letting them roll and drop down onto the ball return system of the first module below. Attached onto this sheet of wood is a vibration sensor, which essentially counts the number of times a ball makes contact with the board, knowing that the ball has made it past the obstacles.  
 
+The obstacle system is essentially a horizontal beam of wood spanning the width of the table, with two servo motors attached under it in the middle. A small plank of balsa wood is attached to each motor, with these "paddles" swinging down once the game starts. Balsa wood is light enough to be driven by the microservos, allowing for the speed required.  
 
+Finally, the backlit LCD panel is glued onto the pillar with a metal bracket, operating as the typical score screens found on these arcade games. It displays a welcome message and instructions on how to start the game, as well as the high score. When the game starts, the score is updated and the high score is updated accordingly when the game is over.  
+
+These components are all connected to a breadboard attached to the side of the machine, which is connected to an ESP32.  
+
+Last but not least, another ultra-thin sheet of wood was used to create the curved signage for the machine. Pre-cut wood letters were hot-glued onto the sign, and I cut up a third of a foam golf ball to glue onto the front as well.  
+
+**The Code:**  
+For the programming, all of it was done in the Arduino IDE. The program uses a preexisting library to write statuses to the LCD panel, and when the first ball roll is detected, it lowers the obstacle panels and starts rotating them in random directions until the game is over. One of the more complicated things done was learning how people build game timers in the program, because delay() could not be used without pausing all the other elements in the game. 
 
 **Technical Difficulties:**  
-The largest technical difficulty with building this project was actually figuring out a way to attach the motors in a way that worked with the thickness of the wooden enclosure. At the end, a combination of electric tape and shipping tape seemed to do the trick. In addition, calibrating the knocking to register successfully, and figuring out a timing to register an attempt was difficult, as it just relied on trial and error. 
+There were several technical difficulties that came up during the project. Almost all of them could be solved by spending more money to upgrade parts.  
+
+The first technical difficulty that arose was the LCD Screen. Occasionally, the LCD screen would just clear for unknown reasons. Even with wires swapped, the error still would occur. A power cycle would seem to fix the issue until the next time it occured.  
+
+The second issue that arose was with the vibration sensor. Unfortunately, the vibration sensor's calibration was terrible, in the sense that the built-in potentiometer would lose it's set levels after a few minutes of playing. This meant that eventually, the vibrations from the servo motors would actually be picked up on the vibration sensor. 
 
 **Video**  
-A video of the KnöchBox in action can be found here:  
-https://youtu.be/6DZXhUA5q48  
+A video of the Monty Ball Machine can be found here:
 
 
