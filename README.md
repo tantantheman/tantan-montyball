@@ -29,7 +29,8 @@ Four ultra-thin sheets of wood (bendable for ramp and front)
 Lots of jumper wires  
 Lots of metal brackets  
 Assorted wooden cut-out letters  
-Hot glue (like, a ton of it) 
+Hot glue (like, a ton of it)  
+Salt and pepper, to taste 
 
 **How to play:**  
 To start the game, roll the first ball off the ramp into the target area. When the game starts, two paddles will attempt to block the target area, frantically rotating back and forth. Your goal is to roll as many balls off the ramp into the target area by the time the 30-second timer expires. High scores of the session will be recorded. 
@@ -123,7 +124,7 @@ The first technical difficulty that arose was the LCD Screen. Occasionally, the 
 
 The second issue that arose was with the vibration sensor. Unfortunately, the vibration sensor's calibration was terrible, in the sense that the built-in potentiometer would lose it's set levels after a few minutes of playing. This meant that eventually, the vibrations from the servo motors would actually be picked up on the vibration sensor. 
 
-**Video**  
+**Video:**  
 A video of Monty Ball in action can be found here:
 https://youtu.be/RgerheXSU-0
 
