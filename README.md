@@ -35,6 +35,10 @@ To start the game, roll the first ball off the ramp into the target area. When t
 Plug in the ESP32 through the back cutout of the machine with a micro-USB cable and USB power brick, and enjoy! The LCD on the front will serve as an indication that the machine is in fact on and ready to play. 
   
 **Design:**  
+![alt text][design]
+
+[design]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-15.jpg "Monty Ball Design"
+
 One of the most exciting aspects of this project was the chance for me to finally go beyond the traditional box-like enclosures that I have been building all semester, and work on improving my woodworking skills as well as my design skills. This time, instead of constructing a box and putting the components inside, I had to design and conceptualize everything in the beginning before I began to work so that every component and section of the Monty Ball Machine would seem integrated into the system as a whole. In addition, I made it a priority to design it to resemble a traditional arcade-style ball game, while being able to fit it on a table. 
 
 There were also other design considerations, such as building components such as the ball ramp and target area to maximize enjoyment while playing. If the angle of the ball ramp was too steep or not steep enough, for example, it would dramatically affect the pace of the game. Furthermore, it was important to choose the right balls for the game. At the end, I chose foam practice golf balls, which were the perfect size and the right softness and weight. Lighter balls moved too fast, and didn't have enough weight to maintain inertia as it rolled down the ball return ramp. 
@@ -104,7 +108,7 @@ Last but not least, another ultra-thin sheet of wood was used to create the curv
 
 ![alt text][sign2]
 
-[intro]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-7.jpg "Monty Ball Signage 2"
+[sign2]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-7.jpg "Monty Ball Signage 2"
 
 **The Code:**  
 For the programming, all of it was done in the Arduino IDE. The program uses a preexisting library to write statuses to the LCD panel, and when the first ball roll is detected, it lowers the obstacle panels and starts rotating them in random directions until the game is over. One of the more complicated things done was learning how people build game timers in the program, because the delay() function could not be used without pausing all the other elements in the game. 
