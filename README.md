@@ -74,13 +74,37 @@ The ball return system was relatively straightforward. A sheet of plywood was el
 
 For the second module, containing the electronics, sensor, and obstacles, another rectangular prism was built, with a face opening towards the player and space in the back to access electronics and to power the system. To create the target area, two small rectangles of balsa wood acted as border pillars, shrinking the target area towards the center. The back of the target area is a rectangle of wood tiled approximately 60 degrees north, essentially catching the balls as they fly off the ramp and letting them roll and drop down onto the ball return system of the first module below. Attached onto this sheet of wood is a vibration sensor, which essentially counts the number of times a ball makes contact with the board, knowing that the ball has made it past the obstacles.  
 
-The obstacle system is essentially a horizontal beam of wood spanning the width of the table, with two servo motors attached under it in the middle. A small plank of balsa wood is attached to each motor, with these "paddles" swinging down once the game starts. Balsa wood is light enough to be driven by the microservos, allowing for the speed required.  
+![alt text][backhalf]
 
-Finally, the backlit LCD panel is glued onto the pillar with a metal bracket, operating as the typical score screens found on these arcade games. It displays a welcome message and instructions on how to start the game, as well as the high score. When the game starts, the score is updated and the high score is updated accordingly when the game is over.  
+[backhalf]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-9.jpg "Monty Ball Back Module"
+
+The obstacle system is essentially a horizontal beam of wood spanning the width of the table, with two servo motors attached under it in the middle. A small plank of balsa wood is attached to each motor, with these "paddles" swinging down once the game starts. Balsa wood is light enough to be driven by the microservos, allowing for the speed required. 
+
+![alt text][detect]
+
+[detect]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-12.jpg "Vibration Sensor"
+
+Finally, the backlit LCD panel is glued onto the pillar with a metal bracket, operating as the typical score screens found on these arcade games. It displays a welcome message and instructions on how to start the game, as well as the high score. When the game starts, the score is updated and the high score is updated accordingly when the game is over. 
+
+![alt text][lcd]
+
+[lcd]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-10.jpg "Monty Ball LCD"
 
 These components are all connected to a breadboard attached to the side of the machine, which is connected to an ESP32.  
 
-Last but not least, another ultra-thin sheet of wood was used to create the curved signage for the machine. Pre-cut wood letters were hot-glued onto the sign, and I cut up a third of a foam golf ball to glue onto the front as well.  
+![alt text][esp]
+
+[esp]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-11.jpg "Wiring"
+
+Last but not least, another ultra-thin sheet of wood was used to create the curved signage for the machine. Pre-cut wood letters were hot-glued onto the sign, and I cut up a third of a foam golf ball to glue onto the front as well. 
+
+![alt text][sign1]
+
+[sign1]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-6.jpg "Monty Ball Signage 1"
+
+![alt text][sign2]
+
+[intro]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-7.jpg "Monty Ball Signage 2"
 
 **The Code:**  
 For the programming, all of it was done in the Arduino IDE. The program uses a preexisting library to write statuses to the LCD panel, and when the first ball roll is detected, it lowers the obstacle panels and starts rotating them in random directions until the game is over. One of the more complicated things done was learning how people build game timers in the program, because the delay() function could not be used without pausing all the other elements in the game. 
@@ -88,7 +112,7 @@ For the programming, all of it was done in the Arduino IDE. The program uses a p
 **Technical Difficulties:**  
 There were several technical difficulties that came up during the project. Almost all of them could be solved by spending more money to upgrade parts.  
 
-The first technical difficulty that arose was the LCD Screen. Occasionally, the LCD screen would just clear for unknown reasons. Even with wires swapped, the error still would occur. A power cycle would seem to fix the issue until the next time it occured.  
+The first technical difficulty that arose was the LCD Screen. Occasionally, the LCD screen would just clear for unknown reasons. Even with wires swapped, the error still would occur. A power cycle would seem to fix the issue until the next time it occured. In addition, it would be advised to use an OLED screen in the future. The LCD just did not refresh fast enough for the score, and the whole screen had to essentially refresh to update small things without error. 
 
 The second issue that arose was with the vibration sensor. Unfortunately, the vibration sensor's calibration was terrible, in the sense that the built-in potentiometer would lose it's set levels after a few minutes of playing. This meant that eventually, the vibrations from the servo motors would actually be picked up on the vibration sensor. 
 
