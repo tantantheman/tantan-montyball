@@ -44,31 +44,31 @@ The most important thing I kept in mind while designing and creating the Monty B
 **The Build:**  
 The frames for both halves of the machine are essentially open-top rectangular prisms, bound together by hot glue and metal brackets. When put together, they resemble an arcade-style game. 
 
-![alt text][arcade cabinet]
+![alt text][arcade]
 
-[intro]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-13.jpg "Monty Ball Cabinet"
+[arcade]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-13.jpg "Monty Ball Cabinet"
 
 ![alt text][ramp]
 
-[intro]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-4.jpg "Monty Ball Ramp"
+[ramp]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-4.jpg "Monty Ball Ramp"
 
 To construct the ramp, I started with a base of a sheet of plywood, and added a small block at the end of the ramp where it is designed to slope up. Then, I overlayed the wood sheet with strips of ultra-thin wood that was able to curve upwards, resting on the block of wood that defines its slope.
 
 ![alt text][rampandball]
 
-[intro]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-5.jpg "Monty Ball Ramp and Ball Return"
+[rampandball]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-5.jpg "Monty Ball Ramp and Ball Return"
 
 ![alt text][overhead]
 
-[intro]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-2.jpg "Monty Ball Ball Return"
+[overhead]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-2.jpg "Monty Ball Ball Return"
 
 ![alt text][return]
 
-[intro]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-3.jpg "Monty Ball Return Drop Point"
+[return]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-3.jpg "Monty Ball Return Drop Point"
 
 ![alt text][balls]
 
-[intro]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-1.jpg "Monty Balls"
+[balls]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-1.jpg "Monty Balls"
 
 The ball return system was relatively straightforward. A sheet of plywood was elevated with a larger block of wood, but this time the sheet was shifted so that it extended out the back of the module, allowing for balls that leave the ramp to drop down below, rolling underneath the ramp to a channel that stopped at the front of the machine. The player could then reach underneath the ramp to get a continuous stream of balls for the game.  
 
