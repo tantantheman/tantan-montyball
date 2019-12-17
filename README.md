@@ -29,7 +29,6 @@ Assorted wooden cut-out letters
 Hot glue (like, a ton of it) 
 
 **How to play:**  
-
 To start the game, roll the first ball off the ramp into the target area. When the game starts, two paddles will attempt to block the target area, frantically rotating back and forth. Your goal is to roll as many balls off the ramp into the target area by the time the 30-second timer expires. High scores of the session will be recorded. 
 
 **How to run:**  
@@ -60,7 +59,7 @@ These components are all connected to a breadboard attached to the side of the m
 Last but not least, another ultra-thin sheet of wood was used to create the curved signage for the machine. Pre-cut wood letters were hot-glued onto the sign, and I cut up a third of a foam golf ball to glue onto the front as well.  
 
 **The Code:**  
-For the programming, all of it was done in the Arduino IDE. The program uses a preexisting library to write statuses to the LCD panel, and when the first ball roll is detected, it lowers the obstacle panels and starts rotating them in random directions until the game is over. One of the more complicated things done was learning how people build game timers in the program, because delay() could not be used without pausing all the other elements in the game. 
+For the programming, all of it was done in the Arduino IDE. The program uses a preexisting library to write statuses to the LCD panel, and when the first ball roll is detected, it lowers the obstacle panels and starts rotating them in random directions until the game is over. One of the more complicated things done was learning how people build game timers in the program, because the delay() function could not be used without pausing all the other elements in the game. 
 
 **Technical Difficulties:**  
 There were several technical difficulties that came up during the project. Almost all of them could be solved by spending more money to upgrade parts.  
@@ -70,6 +69,6 @@ The first technical difficulty that arose was the LCD Screen. Occasionally, the 
 The second issue that arose was with the vibration sensor. Unfortunately, the vibration sensor's calibration was terrible, in the sense that the built-in potentiometer would lose it's set levels after a few minutes of playing. This meant that eventually, the vibrations from the servo motors would actually be picked up on the vibration sensor. 
 
 **Video**  
-A video of the Monty Ball Machine can be found here:
+A video of the Monty Ball Machine in action can be found here:
 
 
