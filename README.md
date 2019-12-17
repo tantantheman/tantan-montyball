@@ -1,4 +1,4 @@
-# Introducing: The Monty Ball Machine
+# Introducing: Monty Ball
 
 ![alt text][intro]
 
@@ -6,6 +6,9 @@
 
 A tabletop game machine for class. Final project for CPSC 334.  
 Programming in Arduino IDE.  
+
+**Concept:**  
+For my final project, I wanted to create something that felt like a culmination of all the skills that I had learned from this course. I wanted to work on improving my physical building skills, as well as designing something with intention from the ground up. I knew that I wanted it to be fun, and push the boundaries of what I had been able to accomplish with previous projects. With these things in mind, Monty Ball was born.
 
 **Dependencies:**  
 ESP32Servo.h  
@@ -121,6 +124,7 @@ The first technical difficulty that arose was the LCD Screen. Occasionally, the 
 The second issue that arose was with the vibration sensor. Unfortunately, the vibration sensor's calibration was terrible, in the sense that the built-in potentiometer would lose it's set levels after a few minutes of playing. This meant that eventually, the vibrations from the servo motors would actually be picked up on the vibration sensor. 
 
 **Video**  
-A video of the Monty Ball Machine in action can be found here:
+A video of Monty Ball in action can be found here:
+https://youtu.be/RgerheXSU-0
 
 
