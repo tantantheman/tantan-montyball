@@ -63,7 +63,7 @@ The frames for both halves of the machine are essentially open-top rectangular p
 
 [ramp]: https://github.com/tantantheman/tantan-montyball/blob/master/montyball-photos/montyball-4.jpg "Monty Ball Ramp"
 
-To construct the ramp, I started with a base of a sheet of plywood, and added a small block at the end of the ramp where it is designed to slope up. Then, I overlayed the wood sheet with strips of ultra-thin wood that was able to curve upwards, resting on the block of wood that defines its slope.
+To construct the ramp, I started with a base of a sheet of plywood, and added a small block at the end of the ramp where it is designed to slope up. Then, I overlaid the wood sheet with strips of ultra-thin wood that was able to curve upwards, resting on the block of wood that defines its slope.
 
 ![alt text][rampandball]
 
