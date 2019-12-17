@@ -123,7 +123,7 @@ For the programming, all of it was done in the Arduino IDE. The program uses a p
 **Technical Difficulties:**  
 There were several technical difficulties that came up during the project. Almost all of them could be solved by spending more money to upgrade parts.  
 
-The first technical difficulty that arose was the LCD Screen. Occasionally, the LCD screen would just clear for unknown reasons. Even with wires swapped, the error still would occur. A power cycle would seem to fix the issue until the next time it occured. In addition, it would be advised to use an OLED screen in the future. The LCD just did not refresh fast enough for the score, and the whole screen had to essentially refresh to update small things without error. 
+The first technical difficulty that arose was the LCD Screen. Occasionally, the LCD screen would just clear for unknown reasons. Even with wires swapped, the error still would occur. A power cycle would seem to fix the issue until the next time it occurred. In addition, it would be advised to use an OLED screen in the future. The LCD just did not refresh fast enough for the score, and the whole screen had to essentially refresh to update small things without error. 
 
 The second issue that arose was with the vibration sensor. Unfortunately, the vibration sensor's calibration was terrible, in the sense that the built-in potentiometer would lose it's set levels after a few minutes of playing. This meant that eventually, the vibrations from the servo motors would actually be picked up on the vibration sensor. 
 
