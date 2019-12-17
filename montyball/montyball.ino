@@ -165,16 +165,12 @@ if (gameStarted == 2)
  // between the current time and last time we blinked the LED bigger than
  // the interval at which we want to blink the LED.
  
- // Check to see if it is time to flash the HEARTBEAT
  if (millis() - previousMillis > timeHeartbeat){
 
-     // Check to see if it is time to turn on the WARNING LED
      if (millis() - previousMillis2 > timeWarning) {
        warning = true;     // set flag so warning LED will start flashing with heartbeat
       // digitalWrite(ledPin2, HIGH);
        
-       // Check to see if it is time to turn on the EXPIRED LED
-       // Once this LED is turned on, it stays on until reset
        if(millis() - previousMillis3 > timeExpired){
          expired = true;   // set flag so warning LED won't flash anymore
          beating = false;  // set flag so heartbeat LED won't flash anymore
@@ -190,3 +186,5 @@ if (gameStarted == 2)
  }
 
 }
+
+/*Game Timer concept from Arduino Forums: https://forum.arduino.cc/index.php?topic=7121.0 */
